@@ -1,7 +1,11 @@
 import sys
 
-name = sys.argv[1]
-num = int(sys.argv[2])
+if __name__ == "__main__":
+    try:
+        name = sys.argv[1]
+    except:
+        name = input("What's your name?\n")
+    from getpass import getpass
+    pw = getpass("What's your Password?\n")
+    print(name, pw)
 
-for _ in range(num):
-    print(f"I'm sorry {name}, I'm afraid I can't do that")
